@@ -68,6 +68,9 @@ RUN \
 # Copy custom configurations
 COPY root/ /
 
+RUN usermod -a -G lp abc
+RUN usermod -a -G lp nginx
+
 # ports and volumes
 EXPOSE 80 443
 VOLUME /config
